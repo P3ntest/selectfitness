@@ -1,13 +1,13 @@
-import { publicProcedure, router } from "./trpc";
+import { config } from "dotenv";
+config();
+import "./db";
+
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import express from "express";
 import morgan from "morgan";
+import { appRouter } from "./router";
 
-export const appRouter = router({
-  userList: publicProcedure.query(async () => {
-    return ["hey", "world"];
-  }),
-});
+export { appRouter };
 
 const middleware = createExpressMiddleware({
   router: appRouter,

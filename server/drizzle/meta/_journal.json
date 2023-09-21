@@ -1,0 +1,13 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1695305602345,
+      "tag": "0000_goofy_robbie_robertson",
+      "breakpoints": true
+    }
+  ]
+}
